@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>03-11</title>
+  </head>
+  <body>
+    <div id="app11">
+      잔고 : <input type="number" v-model="balance" />
+      <br />
+      회원님의 등급:
+      <span v-if="balance>1000000">GOLD</span>
+      <span v-else-if="balance>500000">SILVER</span>
+      <span v-else-if="balance>20000">BRONZE</span>
+      <span v-else>BASIC</span>
+    </div>
+    <script src="https://unpkg.com/vue"></script>
+    <script>
+      let vm = Vue.createApp({
+        name: 'app11',
+        data() {
+          return { balance: 0 };
+        },
+      }).mount('#app11');
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>d_c</title>
+  </head>
+  <script>
+    window.onload = function () {
+      //문서 객체를 선택합니다.
+      let clock = document.getElementById('clock');
+
+      //1초마다 함수를 실행시킵니다.
+      setInterval(function () {
+        // this가 무엇일까 : 누가 호출했는지에 따라 결정 -> window 객체
+        let now = new Date();
+        clock.innerHTML = now.toString();
+      }, 1000);
+    };
+    const score = [82, 96, 54, 76, 92, 99, 62, 88, 9, 100];
+    //문자열로 비교
+    console.log('before = ' + score);
+
+    score.sort();
+    console.log('after = ' + score);
+  </script>
+  <body>
+    <h1 id="clock"></h1>
+  </body>
+</html>

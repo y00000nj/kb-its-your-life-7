@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pr</title>
+  </head>
+  <script>
+    function buttonClick() {
+      alert('click');
+    }
+  </script>
+  <body>
+    <button onclick="buttonClick()">버튼</button>
+  </body>
+</html>
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>pr2</title>
+  </head>
+  <script>
+    //이벤트를 연결합니다.
+    window.onload = function () {
+      //문서 객체를 선택합니다.
+      let button = document.getElementById('button');
+      button.onclick = function () {
+        alert('click2');
+      };
+    };
+  </script>
+  <body>
+    <button id="button">버튼</button>
+  </body>
+</html>

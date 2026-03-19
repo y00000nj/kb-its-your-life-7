@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ex01-1</title>
+  </head>
+  <body>
+    <div class="fruits">
+      <p>Apple</p>
+      <p>Banana</p>
+      <p>Orange</p>
+    </div>
+
+    <script>
+      const fruits = document.querySelectorAll('.fruits p');
+      //fruits 는 3개의 P 태그를 포함한 노드 리스트(배열과 비슷한 구조)다.
+      // 이제 fruits를 배열로 변환하자.
+      //******* 배열이 아닌 iterable 객체를 받아서 -> 배열로 만들어줬음 ******
+      const fruitsArray = Array.from(fruits);
+      console.log(fruitsArray);
+      //이제 배열을 취급하므로 map()을 사용할 수 있다.
+      const fruitsNames = fruitsArray.map((fruit) => fruit.textContent);
+      //일명 함수, 람다 함수(화살표 함수)
+      //매개변수 생략(map 메서드에 의해 결정), 1줄 -> 매개변수 새중괄호, return 키워드 생략(전달 된 녀석의 textContent를 리턴)
+      //p태그를 전달했더니 text가 나옴
+      console.log(fruitsNames);
+      //["Apple", "Banana", "Orange"]
+    </script>
+  </body>
+</html>
+
+<!--
+** 람다 함수 **
+두줄 이상일때는 {} 중괄호 생략 X
+ -->

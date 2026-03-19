@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1" />
+    <title>p1</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      width: 960px;
+      margin: auto;
+      overflow: hidden;
+    }
+    #menu {
+      width: 260px;
+      float: left;
+    }
+    #section {
+      width: 700px;
+      float: right;
+    }
+    li {
+      list-style: none;
+    }
+    @media screen and (max-width: 767px) {
+      /* 스마트폰 사이즈에서는 전부 해제 */
+      body {
+        width: auto;
+        #menu {
+          width: auto;
+          float: none;
+        }
+        #section {
+          width: auto;
+          float: none;
+        }
+      }
+    }
+  </style>
+  <body>
+    <div id="menu">
+      <ul>
+        <li>메뉴1</li>
+        <li>메뉴2</li>
+        <li>메뉴3</li>
+      </ul>
+    </div>
+    <div id="section">
+      <h1>Lorem, ipsum.</h1>
+      <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Perferendis sint ducimus sequi
+        fuga consequuntur excepturi dolorum? Distinctio laudantium accusantium optio quisquam,
+        explicabo nisi dolore? Consectetur odio dolore quis maxime unde. Lorem ipsum dolor sit amet
+        consectetur adipisicing elit. Sint laudantium fuga dolore adipisci porro, sapiente, omnis
+        saepe vel eius consequuntur repudiandae ab odio sequi commodi officia repellendus mollitia?
+        Veritatis, doloremque! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+        voluptatibus nemo, fugiat assumenda quos consequatur. Exercitationem nihil veritatis
+        recusandae corporis! Quibusdam quisquam quia dolorem provident inventore fugiat minus
+        excepturi esse.
+      </p>
+    </div>
+  </body>
+</html>
