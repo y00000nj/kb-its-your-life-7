@@ -1,0 +1,27 @@
+package ch16.sec05.exam02;
+
+public class Button {
+    public void click() {
+        this.clickListener.onClick();
+    }
+
+    //정적 멤버 인터페이스
+    @FunctionalInterface
+    public static interface ClickListener{
+        //추상 메소드
+        void onClick();
+    }
+
+    //필드
+    private ClickListener clickListener;
+
+    //메소드
+
+    public ClickListener getClickListener() {
+        return clickListener;
+    }
+
+    public void setClickListener(ClickListener clickListener) {
+        this.clickListener = clickListener;
+    }
+}

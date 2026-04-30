@@ -1,0 +1,26 @@
+package ch15.sec03.exam01;
+
+import java.util.HashSet;
+import java.util.Set;
+
+public class HashSetExample {
+    public static void main(String[] args) {
+        //HashSet 컬렉션 생성
+        Set<String> set = new HashSet<String>();
+
+        //객체 저장
+        set.add("Java");
+        set.add("JDBC");
+        set.add("Servelet/JSP");
+        set.add("Java");
+        set.add("iBATIS");
+
+        //저장된 객체 수 출력
+        int size = set.size();
+        System.out.println("총 객체 수: " + size);
+    }
+}
+//set collection
+//저장 순서 유지 x, 중복 x
+//HashSet
+//동등 객체를 중복 저장하지 않음
